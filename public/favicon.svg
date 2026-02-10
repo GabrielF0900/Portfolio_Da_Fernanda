@@ -15,7 +15,7 @@
     <!-- Efeito de sombra interna superior -->
     <rect width="200" height="200" rx="40" fill="white" opacity="0.05" />
 
-    <!-- Letra G moderna e bem centralizada -->
+    <!-- Letra F moderna e bem centralizada -->
     <text x="100" y="110"
         font-family="'Segoe UI', 'Arial', sans-serif"
         font-size="130"
@@ -23,5 +23,5 @@
         fill="white"
         text-anchor="middle"
         dominant-baseline="middle"
-        filter="url(#shadow)">G</text>
+        filter="url(#shadow)">F</text>
 </svg>

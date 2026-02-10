@@ -7,7 +7,7 @@
   },
   "headers": [
     {
-      "source": "/favicon-gabriel.svg",
+      "source": "/favicon.svg",
       "headers": [
         {
           "key": "Cache-Control",

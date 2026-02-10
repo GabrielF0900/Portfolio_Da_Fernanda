@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Zap } from "lucide-react";
+import { Zap, Wrench } from "lucide-react";
 import { technologies } from "../../constants/technologies";
 
 export default function TechnologiesSection() {
@@ -16,8 +16,8 @@ export default function TechnologiesSection() {
             </p>
           </div>
 
-          <div className="flex justify-center">
-            <Card className="text-center hover:shadow-lg transition-shadow max-w-2xl w-full">
+          <div className="flex justify-center gap-8 flex-wrap">
+            <Card className="text-center hover:shadow-lg transition-shadow w-72">
               <CardHeader>
                 <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-6 h-6 text-orange-600" />
@@ -27,6 +27,24 @@ export default function TechnologiesSection() {
               <CardContent>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {technologies.infrastructure.map((tech: string) => (
+                    <Badge key={tech} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow w-72">
+              <CardHeader>
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Wrench className="w-6 h-6 text-blue-600" />
+                </div>
+                <CardTitle className="text-lg">Ferramentas</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {technologies.tools.map((tech: string) => (
                     <Badge key={tech} variant="secondary" className="text-xs">
                       {tech}
                     </Badge>

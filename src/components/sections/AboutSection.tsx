@@ -45,7 +45,7 @@ export default function AboutSection() {
               <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl overflow-hidden flex items-center justify-center">
                 <img
                   src="/images/FotoDeFernanda.jpeg"
-                  alt="Fernanda Ferreira"
+                  alt="Fernanda Oliveira"
                   className="w-full h-full object-cover"
                 />
               </div>

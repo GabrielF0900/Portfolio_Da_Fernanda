@@ -18,7 +18,7 @@ export default function HeroSection() {
               Disponível para novos projetos
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-6">
-              Fernanda Ferreira
+              Fernanda Oliveira
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Assistente Cloud & AWS Cloud Practitioner. Transformando

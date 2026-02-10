@@ -12,7 +12,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/favicon-gabriel.svg",
+        source: "/favicon.svg",
         headers: [
           {
             key: "Cache-Control",
@@ -25,15 +25,6 @@ const nextConfig = {
           {
             key: "Expires",
             value: "0",
-          },
-        ],
-      },
-      {
-        source: "/favicon.svg",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "no-cache, no-store, must-revalidate, max-age=0",
           },
         ],
       },

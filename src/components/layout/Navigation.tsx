@@ -23,7 +23,9 @@ export default function Navigation({ activeSection }: NavigationProps) {
 
   const handleDownloadCV = async () => {
     try {
-      const response = await fetch("/curriculo-gabriel-falcao.pdf");
+      const response = await fetch(
+        "/CV - Fernanda.Oliveira BASE Cloud e IA.pdf",
+      );
       if (!response.ok) {
         throw new Error("Erro ao baixar o currículo");
       }
@@ -31,7 +33,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "curriculo-gabriel-falcao.pdf";
+      link.download = "CV - Fernanda.Oliveira BASE Cloud e IA.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -51,7 +53,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
             onClick={() => handleSectionClick("inicio")}
             className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
           >
-            Fernanda Ferreira
+            Fernanda Oliveira
           </button>
 
           {/* Desktop Navigation */}
