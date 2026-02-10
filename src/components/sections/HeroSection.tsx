@@ -1,7 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail, Zap } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ArrowRight, Github, Linkedin, Mail, Phone, Zap } from "lucide-react";
 import { useScrollToSection } from "../../hooks/useScroll";
 
 export default function HeroSection() {
@@ -35,17 +42,43 @@ export default function HeroSection() {
               Ver Projetos
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-lg px-8 bg-transparent"
-              asChild
-            >
-              <a href="mailto:gabriel@example.com">
-                <Mail className="w-5 h-5 mr-2" />
-                Entrar em Contato
-              </a>
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-lg px-8 bg-transparent"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Entrar em Contato
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-xs sm:max-w-sm aspect-square flex flex-col justify-center">
+                <DialogHeader>
+                  <DialogTitle className="text-center text-xl">
+                    Contatos
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="flex flex-col gap-6 py-6">
+                  <a
+                    href="mailto:fernandaffoliveira9536@gmail.com"
+                    className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors"
+                  >
+                    <Mail className="w-6 h-6 text-primary" />
+                    <span className="text-base">
+                      fernandaffoliveira9536@gmail.com
+                    </span>
+                  </a>
+                  <a
+                    href="tel:+5511993215554"
+                    className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors"
+                  >
+                    <Phone className="w-6 h-6 text-primary" />
+                    <span className="text-base">(11) 99321-5554</span>
+                  </a>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
 
           <div className="flex justify-center gap-6">
